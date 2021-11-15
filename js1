@@ -1,0 +1,173 @@
+//VARIABLES
+let project;
+project="one";
+alert(project);
+//multiple variables in a single line
+let project1 = 'onee', value=22, project2 = 'two';
+alert(project1);
+//multiple variables in this multiline style
+let user = 'shona',
+  age = 4,
+  gender = 'female';
+  alert(user);
+  alert(age);
+  //we can declare two variables and copy the date from one var to another var
+  let user1="srinidhi";
+  let user2;
+  user2=user1;
+  alert(user1);
+  alert(user2);
+  //using constant variable instead of let variable
+  const COLOR_GREEN = "#0F0";
+  const COLOR_BLUE = "#00F";
+  let color = COLOR_BLUE;
+  alert(color);
+  //DATATYPES: BASICALLY THERE ARE 8 TYPES OF DATATYPE IN JS
+  let bigInt = 12345n;//bigInt
+  alert(bigInt);
+ 
+  var a=2;//number 
+  var b=3.55;
+  var c=4.56e+7;
+  alert(a);
+  alert(b);
+  alert(c);
+  alert(12/0);//in numbers there are also some spl values infinit and NAN
+  alert(-2/0);
+  alert("hi"/2);//NAN
+  
+  let statemet1="let's have a cup of coffee.";//String there are 3 types single,double and backticks
+  let statement2='she said hello and left';
+  let statement3="hi";
+  alert(`she came back and said ,${statement3}`);
+  alert(statement1);
+  alert(statement2);
+  
+  var a=2,b=3,c=4;//boolean true or false
+  alert(a<b);
+  
+  let a;//undefined
+  let b="hi";
+  alert(a);
+  alert(b);
+  
+  let a="helo";//null
+  let b=null;
+  a=null;
+  alert(a);
+  alert(b);
+  
+  typeof true;//the typeof operator
+  typeof 15;
+  typeof 'hello';
+  typeof undefined;
+  typeof {
+  name:"keerthi",age:12;
+  }
+  
+  //INTERACTIONS :ALERT ,PROMPT,CONFIRMATION
+  let age= prompt('how old you are?',10);//prompt
+  alert (`im ${age}old`);
+  
+  alert ("hellooo");//alert
+  
+  let name = confirm("what is your name?");//confirm
+  alert( name);
+  
+  //TYPE CONVERSIONS IN JAVA SCRIPT
+  let value = true;//string conversion
+  alert(typeof value); 
+  value = String(value); 
+  alert(typeof value); 
+  
+  let str = "12";  //number conversion
+  alert(typeof str); 
+  let num = Number(str); 
+  alert(typeof num);
+  
+  alert( Boolean(1) ); // true  //boolean conversion
+  alert( Boolean(0) ); // false
+  alert( Boolean("hello") ); // true
+  alert( Boolean("") ); //false
+  
+  //BASIC OPERATORS
+  
+  let x = 2;//unary
+  x = -x;
+  alert( x );
+  
+  let x = 1, y = 3;
+  alert( y - x ); //binary
+  
+  let x = 5;//multiplication
+  let y = 2;
+  let z = x * y;
+  alert(z);
+  
+  let x = 5;//addition
+  let y = 2;
+  let z = x + y;
+  alert(z);
+  
+  let x = 5;//subtraction
+  let y = 2;
+  let z = x - y;
+  alert(z);
+  
+  let x = 5;//division
+  let y = 2;
+  let z = x / y;
+  alert(z);
+  
+  alert( 5 % 2 ); //remainder
+  alert( 8 % 3 ); 
+  
+  alert( 1 ** 2 ); //exponentiation
+  alert( 2 ** 3 ); 
+  
+  //string concatination with binary ++
+  let k = "my" + "string";
+  alert(s);
+  alert(2 + 2 + '1' ); 
+  //numeric conversion,unary +
+  let x = 2;//no change for numeric t
+  alert( +x ); 
+  let y = -6;
+  alert( +y ); 
+  alert( +true ); 
+  alert( +"" ); 
+  let apples = "7";
+  let oranges = "9";
+  alert( apples + oranges );
+  
+ //operator precedence
+  let x = (100 + 50) * 3;
+  let y = (200 -2)*7;
+  alert(x);
+  alert(y);
+  //assignment
+  let x = 10;
+  x += 5; 
+  alert(x);
+  let x=10;
+  x -= 5;
+  alert(x);
+  let x=10;
+  x *=5;
+  alert(x);
+  let x=10;
+  x /=5;
+  alert(x);
+  let x=10;
+  x % =5;
+  alert(x);
+  
+  let x = 2;//increament
+  x++;        
+  alert( x );
+  
+  let x =2;//decreament
+  x--;
+  alert(x);
+  
+  
