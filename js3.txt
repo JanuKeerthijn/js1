@@ -1,0 +1,157 @@
+//BREAK STATEMENT
+let a=5;
+switch(a){
+case 2:
+alert('it is two');
+break;
+case 3:
+alert('it is three');
+break;
+case 4:
+alert('it is four');
+break;
+case 5 :
+alert('it is five');
+break;
+}
+
+let b=2;
+switch(b){
+case 2:
+alert('it is two');//no break here soo continuing 
+case 3:
+alert('it is three');
+case 4:
+alert('it is four');
+break;//here break is there so it will stop
+case 5 :
+alert('it is five');
+break;
+}
+
+let j = "1";
+let k = 0;
+switch (+j) {
+  case k + 1:
+    alert("this runs, because +j is 1, exactly equals +k");
+    break;
+    default:
+    alert("this doesn't run");
+}
+
+let kee=2;
+switch(kee){
+case 5:
+alert('this is first case');
+break;
+case 2://gouping of case
+case 3:
+alert('this is second case');
+alert('this is my third case');
+break
+}
+
+//FUNCTIONS
+//function declaration
+function showMessage() {
+  alert( 'Hello everyone!' );
+}
+showMessage();
+// local variable
+function showMessage( ){
+let msg ='good morning';
+alert(msg);
+}
+showMessage( );
+
+function showMessage() {
+let message = "Hello."; 
+alert( message );
+}
+showMessage(); // Hello.
+alert( message ); //error bcz The variable is local to the function
+
+//outer variable
+let userName = 'keerthi';
+function showMessage() {
+let message = 'say hi, ' + userName;
+alert(message);
+}
+showMessage(); 
+
+let userName = 'kee';//a function has full access to outer variable it can modify it as well
+function showMessage() {
+ userName = "rthi"; // (1) changed the outer variable
+let message = 'Hello, ' + userName;
+  alert(message);
+}
+alert( userName ); // kee before the function call
+showMessage();
+alert( userName ); // rthi, the value was modified by the function
+
+//parameter
+function showMessage(from, msg) { // parameters: from, text
+  alert(from + ': ' + msg);
+}
+showMessage('kee', 'Hello!'); // kee: Hello! 
+showMessage('kee', "hru?"); // kee: hru? 
+
+function showMessage(from, msg) {
+from = '*' + from + '*'; 
+ alert( from + ': ' + msg);
+}
+let from = "k";
+showMessage(from, "hi"); // k,hi
+alert( from ); // k
+//default value
+function showMessage(from, text = " ") {
+  alert( from + ": " + text );
+}
+//functions==commit
+showMessage("myname");
+function showPrimes(n) {
+  nextPrime: for (let i = 2; i < n; i++) {
+for (let j = 2; j < i; j++) {
+if (i % j == 0) continue nextPrime;
+    }
+
+    alert( i ); // a prime
+  }
+}
+//Function expression
+function sayHi() {
+  alert( "Hello" );
+}
+alert( sayHi );
+
+function kee() {   
+  alert( "Hello" );
+}
+let func = kee;   
+func(); // Hello     
+kee(); // Hello
+
+//call back function
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+function showOk() {
+  alert( "You agreed." );
+}
+function showCancel() {
+  alert( "You canceled the execution." );
+}
+ask("Do you agree?", showOk, showCancel);
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+ask(
+  "Do you agree?",
+  function() { alert("You agreed1."); },
+  function() { alert("You canceled the exe."); }
+);
+
+
