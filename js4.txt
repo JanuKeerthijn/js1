@@ -1,0 +1,133 @@
+//ARROW FUNCTIONS
+
+let sum=(a,b) => a+b;
+alert(sum( 1,2));
+
+let hi=( )=>alert('hey');
+hi();
+
+let age = prompt("What is your age?", 18);
+let welcome = (age < 18) ?
+  () => alert('Hello') :
+  () => alert("Greetings!");
+welcome();
+
+//OBJECTS:in java objects are called properties
+let person=
+{
+name:"keerthi",
+age:21,
+gender:"female"
+};
+alert(person.name);
+alert(person["age"]);
+person.eyecolor="blue";
+alert(person.eyecolor;
+
+let age1=prompt("enter name?","name");
+let person1=
+{
+name:"kee",
+age:18,
+};
+alert(person1[age1]);
+
+//computed property
+
+let fruit = prompt("Which fruit to buy?", "banana");
+let bag = {
+  [fruit]: 1, 
+};
+alert( bag.banana); 
+
+//property namelimitation
+let me={
+  for: 1,
+  for1:2,
+  for2:3,
+  for3:5
+  };
+  alert(me.for+me.for1+me.for2+me.for3);
+  
+let object={
+0:"kee"
+};
+alert(object[0]);
+
+let object={
+0="kee"
+};
+alert(object.0);
+//Property existence test, “in” operator.
+let user = { name: "kee", age: 21 };
+alert( "age" in user ); // true, user.age exists
+alert( "gender" in user ); //
+//for in loop   
+let user = {
+  name: "John",
+  age: 30,
+  isAdmin: true
+};
+for (let key in user) {
+  alert( key );  
+  alert( user[key] ); 
+}
+//cloning and merging
+let user = {
+  name: "John",
+  age: 30
+};
+let clone = {};
+for (let key in user) {
+  clone[key] = user[key];
+}
+clone.name = "Pete"; 
+alert( user.name );
+//object.assign
+let user = {
+  name: "Jann",
+  age: 12
+};
+let clone = Object.assign({}, user);
+//nesting cloning
+let user = {
+  name: "Janu",
+  sizes: {
+    height: 12,
+    width: 10
+  }
+};
+alert( user.sizes.height ); 
+//object
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  };
+  person.sayHi = function() {
+  alert("Hello!");
+};
+person.sayHi();
+  
+//This in method
+let user = {
+  name: "J",
+  age: 0,
+   sayHi() {
+    alert(this.name);
+  }
+};
+user.sayHi();
+
+//this is not bound
+
+let user = { name: "Janu" };
+let admin = { name: "shona" };
+function sayHi() {
+  alert( this.name );
+}
+user.f = sayHi;
+admin.f = sayHi;
+user.f(); 
+admin.f();
+admin['f']();
